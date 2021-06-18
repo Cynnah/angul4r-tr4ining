@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ItemComponent implements OnInit {
   title = 'Coucou';
-  welcomeMessage = 'Welcome Message!'
-
+  welcomeMessage = 'Welcome Message!';
+  newColor = 'white';
   gardenFruit = [
     {title: 'Strawberry'},
     {title: 'Raspberry'},
@@ -18,6 +18,15 @@ export class ItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  updateColor() {
+    console.log('Update Color!!')
+    this.newColor = 'salmon';
+  }
+
+  anotherColor() {
+    this.newColor = 'red';
   }
 
 }

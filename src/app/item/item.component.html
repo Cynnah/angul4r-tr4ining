@@ -8,5 +8,19 @@
         <!-- Pour afficher une variable d'un component vers le html on peut use {{}} -->
         <h3>{{ welcomeMessage }}</h3> 
         <pre>{{ gardenFruit | json }}</pre>
+        
+        <span [style.color]="newColor">Un texte coloré!</span>
+        <hr>
+            <mat-form-field class="example-full-width">
+              <hr>
+              <!-- Deuxieme forme -->
+              <!-- c'est le two way binding propre au formulaire en changeant la valeur ça va changer la couleur -->
+              <input matInput [(ngModel)]= "newColor" type="text">
+            </mat-form-field>
+        <!-- Troisieme forme de Binding -->
+        <!-- Pour afficher quelque chose dans le html on va le lier au ts avec () -->
+        <!-- Ici newColor correspond à la variable dans le ts -->
+        <button mat-button (click)="updateColor()">Update</button>
+        <button mat-button (mouseenter)="anotherColor()">Mouse Hover</button>
     </mat-card-content>
 </mat-card>
