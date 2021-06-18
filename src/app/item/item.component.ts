@@ -9,10 +9,17 @@ export class ItemComponent implements OnInit {
   title = 'Coucou';
   welcomeMessage = 'Welcome Message!';
   newColor = 'white';
-  gardenFruit = [
+  selectedFruit = null;
+
+  gardenFruits = [
     {title: 'Strawberry'},
     {title: 'Raspberry'},
-    {title: 'Apple'}
+    {title: 'Apple'},
+    {title: 'Peach'},
+    {title: 'Apricot'},
+    {title: 'Watermelon'},
+    {title: 'Melon'},
+    {title: 'Grape'}
   ]
 
   constructor() { }
@@ -29,4 +36,8 @@ export class ItemComponent implements OnInit {
     this.newColor = 'red';
   }
 
+  selectFruit(fruit) {
+    console.log('selected fruit', fruit);
+    this.selectedFruit = fruit;
+  }
 }
