@@ -39,6 +39,8 @@
         <mat-card-title>DEBUG</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-        <span *ngIf= "selectedFruit">{{ selectedFruit | json }}</span>
+        <span *ngIf= "selectedFruit; else elseBlock">{{ selectedFruit | json }}</span>
+        <!-- Ici #elseBlock est une variable locale  -->
+        <ng-template #elseBlock>Select a fruit</ng-template>
     </mat-card-content>
 </mat-card>
